@@ -1,0 +1,32 @@
+<head>
+  <title>MyFirstMetPr</title>
+</head>
+
+<body>
+<div class="container">
+  <header class="navbar">
+    <div class="navbar-inner">
+      <a class="brand" href="/">Microscope</a>
+    </div>
+  </header>
+  <div id="main" class="row-fluid">
+    {{> postsList}}
+  </div>
+</div>
+</body>
+
+<template name="postsList">
+  <div class="posts page">
+    {{#each posts}}
+    {{> postItem}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="postItem">
+  <div class="post">
+    <div class="post-content">
+      <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+    </div>
+  </div>
+</template>
